@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: black;
+            font-family: "Montserrat Underline", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+        }
+        header{
+            display: flex;
+            justify-content: space-around;
+            border: 3px solid black;
+            background-color:rgb(34, 33, 33);
+            height: 50px;
+        }
+        .btn{
+            border: 1px solid white;
+            border-radius: 20px;
+            color: white;
+            background-color: black;
+            text-decoration: underline;
+            height: 25px;
+            width: 90px;
+            transition: all .1s ease;
+            font-weight: bold;
+        }
+        .btn:hover{
+            background-color: white;
+            color: black;
+        }
+        
+        section{
+            color: white;
+            display: grid;
+            grid-template-columns: 3fr 4fr 3fr;
+            justify-content: center;
+            align-items: center;
+            margin-top: 200px;
+        }
+        .cont{
+            text-transform: uppercase;
+            font-size: 13px;
+            line-height: 25px;
+            padding-right: 20px;
+
+        }
+        .cont button{
+            border: 1px solid white;
+            border-radius: 20px;
+            height: 40px;
+            width: 100px;
+            background-color: white;
+        }
+        .hello{
+            margin-top: 30px;
+            
+        }
+        .btun{
+            margin-top: 10px;
+            font-size: 13px;
+        }
+        .mer{
+            justify-content: center;
+            align-items: center;
+            padding-left: 100px;
+        }
+        p{
+            color: white;
+            border: 1px solid white;
+            margin-top: 12px;
+            height: 20px;
+            width: 60px;
+            padding-left: 4px;
+        }
+        .hello button{
+            font-weight: bold;
+            transition: all .2s ease;
+        }
+        .hello button:hover{
+            color: white;
+            background-color: black;
+        }
+        iframe{
+            border: none;
+            height: 400px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span>
+            <p>LOGO</p>
+        </span>
+        <nav class="btun">
+            <button class="btn">HOME</button>
+            <button class="btn">OFFERS</button>
+            <button class="btn">BUY NOW</button>
+            <button class="btn">SELL NOW</button>
+            <button class="btn">ABOUT US</button>
+            <button class="btn">SIGN UP</button>
+        </nav>
+    </header>
+    <section>
+        <div class="mer">
+            <h1>MERCURY</h1>
+        </div>
+        <div class="cont">
+            Mercury is the smallest planet in our Solar System and the closest to the Sun. Its surface is heavily cratered and resembles the Moon. Due to its proximity to the Sun, temperatures vary dramatically between day and night.<br>
+            Mercury has a very thin exosphere composed of atoms blasted off its surface by solar wind and micrometeoroid impacts — not a thick atmosphere like Earth's. The surface shows cliffs (lobate scarps), plains, and large impact basins such as Caloris Basin.<br>
+            Mercury has been visited by several spacecraft. Early flybys provided initial imagery and data; later orbiters mapped the surface and studied its magnetic field and exosphere.
+            <div class="hello">
+                <button>BUY NOW</button>
+            </div>
+        </div>
+        <div>
+             <iframe src="https://solarsystem.nasa.gov/gltf_embed/2369/"></iframe>
+        </div>
+
+    </section>
+</body>
+</html>
