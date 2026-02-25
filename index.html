@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat+Underline:ital,wght@0,100..900;1,100..900&display=swap');
-        *{
+
+        * {
             margin: 0;
             padding: 0;
         }
-        body{
+
+        body {
             background-color: black;
             font-family: "Montserrat Underline", sans-serif;
             font-optical-sizing: auto;
             font-weight: weight;
             font-style: normal;
         }
-        header{
+
+        header {
             display: flex;
             justify-content: space-around;
             border: 3px solid black;
-            background-color:rgb(34, 33, 33);
+            background-color: rgb(34, 33, 33);
             height: 50px;
         }
-        .btn{
+
+        .btn {
             border: 1px solid white;
             border-radius: 20px;
             color: white;
@@ -35,12 +40,13 @@
             transition: all .1s ease;
             font-weight: bold;
         }
-        .btn:hover{
+
+        .btn:hover {
             background-color: white;
             color: black;
         }
-        
-        section{
+
+        section {
             color: white;
             display: grid;
             grid-template-columns: 3fr 4fr 3fr;
@@ -48,34 +54,40 @@
             align-items: center;
             margin-top: 200px;
         }
-        .cont{
+
+        .cont {
             text-transform: uppercase;
             font-size: 13px;
             line-height: 25px;
             padding-right: 20px;
 
         }
-        .cont button{
+
+        .cont button {
             border: 1px solid white;
             border-radius: 20px;
             height: 40px;
             width: 100px;
             background-color: white;
         }
-        .hello{
+
+        .hello {
             margin-top: 30px;
-            
+
         }
-        .btun{
+
+        .btun {
             margin-top: 10px;
             font-size: 13px;
         }
-        .mer{
+
+        .mer {
             justify-content: center;
             align-items: center;
             padding-left: 100px;
         }
-        p{
+
+        p {
             color: white;
             border: 1px solid white;
             margin-top: 12px;
@@ -83,21 +95,64 @@
             width: 60px;
             padding-left: 4px;
         }
-        .hello button{
+
+        .hello button {
             font-weight: bold;
             transition: all .2s ease;
         }
-        .hello button:hover{
+
+        .hello button:hover {
             color: white;
             background-color: black;
         }
-        iframe{
+
+        iframe {
             border: none;
             height: 400px;
             width: 400px;
         }
+
+        img {
+            height: 400px;
+            width: 400px;
+        }
+
+        body.light {
+            background-color: rgba(138, 136, 136, 0.506);
+        }
+
+        body.light header {
+            background-color: #f2f2f2;
+        }
+        
+
+        body.light section {
+            color: black;
+        }
+
+        body.light p {
+            color: black;
+            border: 1px solid black;
+        }
+
+        body.light .btn {
+            color: black;
+            border: 1px solid black;
+            background-color: white;
+        }
+
+        body.light .btn:hover {
+            background-color: black;
+            color: white;
+        }
+
+        body.light .cont button {
+            background-color: black;
+            color: white;
+        }
     </style>
 </head>
+
 <body>
     <header>
         <span>
@@ -110,6 +165,7 @@
             <button class="btn">SELL NOW</button>
             <button class="btn">ABOUT US</button>
             <button class="btn">SIGN UP</button>
+            <button class="btn" onclick="toggleMode()" id="modeBtn">LIGHT</button>
         </nav>
     </header>
     <section>
@@ -117,17 +173,36 @@
             <h1>MERCURY</h1>
         </div>
         <div class="cont">
-            Mercury is the smallest planet in our Solar System and the closest to the Sun. Its surface is heavily cratered and resembles the Moon. Due to its proximity to the Sun, temperatures vary dramatically between day and night.<br>
-            Mercury has a very thin exosphere composed of atoms blasted off its surface by solar wind and micrometeoroid impacts — not a thick atmosphere like Earth's. The surface shows cliffs (lobate scarps), plains, and large impact basins such as Caloris Basin.<br>
-            Mercury has been visited by several spacecraft. Early flybys provided initial imagery and data; later orbiters mapped the surface and studied its magnetic field and exosphere.
+            Mercury is the smallest planet in our Solar System and the closest to the Sun. Its surface is heavily
+            cratered and resembles the Moon. Due to its proximity to the Sun, temperatures vary dramatically between day
+            and night.<br>
+            Mercury has a very thin exosphere composed of atoms blasted off its surface by solar wind and micrometeoroid
+            impacts — not a thick atmosphere like Earth's. The surface shows cliffs (lobate scarps), plains, and large
+            impact basins such as Caloris Basin.<br>
+            Mercury has been visited by several spacecraft. Early flybys provided initial imagery and data; later
+            orbiters mapped the surface and studied its magnetic field and exosphere.
             <div class="hello">
                 <button>BUY NOW</button>
             </div>
         </div>
         <div>
-             <iframe src="https://solarsystem.nasa.gov/gltf_embed/2369/"></iframe>
+            <img src="/Transparent_Mercury.png" alt="Mercury Image">
         </div>
 
     </section>
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle("light");
+
+            let btn = document.getElementById("modeBtn");
+
+            if (document.body.classList.contains("light-mode")) {
+                btn.innerText = "DARK";
+            } else {
+                btn.innerText = "LIGHT";
+            }
+        }
+    </script>
 </body>
+
 </html>
