@@ -17,7 +17,7 @@
             background-color: black;
             font-family: "Montserrat Underline", sans-serif;
             font-optical-sizing: auto;
-            font-weight: weight;
+            font-weight: 400; /* ✅ fixed */
             font-style: normal;
         }
 
@@ -60,7 +60,6 @@
             font-size: 13px;
             line-height: 25px;
             padding-right: 20px;
-
         }
 
         .cont button {
@@ -73,7 +72,6 @@
 
         .hello {
             margin-top: 30px;
-
         }
 
         .btun {
@@ -106,15 +104,10 @@
             background-color: black;
         }
 
-        iframe {
-            border: none;
-            height: 400px;
-            width: 400px;
-        }
-
         img {
             height: 400px;
             width: 400px;
+            object-fit: contain;
         }
 
         body.light {
@@ -124,7 +117,6 @@
         body.light header {
             background-color: #f2f2f2;
         }
-        
 
         body.light section {
             color: black;
@@ -168,10 +160,12 @@
             <button class="btn" onclick="toggleMode()" id="modeBtn">LIGHT</button>
         </nav>
     </header>
+
     <section>
         <div class="mer">
             <h1>MERCURY</h1>
         </div>
+
         <div class="cont">
             Mercury is the smallest planet in our Solar System and the closest to the Sun. Its surface is heavily
             cratered and resembles the Moon. Due to its proximity to the Sun, temperatures vary dramatically between day
@@ -181,15 +175,16 @@
             impact basins such as Caloris Basin.<br>
             Mercury has been visited by several spacecraft. Early flybys provided initial imagery and data; later
             orbiters mapped the surface and studied its magnetic field and exosphere.
+
             <div class="hello">
                 <button>BUY NOW</button>
             </div>
         </div>
         <div>
-            <img src="Transparent_Mercury.png" alt="Mercury Image">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Transparent_Mercury.png" alt="Mercury Image">
         </div>
-
     </section>
+
     <script>
         function toggleMode() {
             document.body.classList.toggle("light");
